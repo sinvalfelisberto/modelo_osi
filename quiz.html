@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz OSI - Final</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+<body>
+
+    <header>
+        <h1>Desafio Modelo OSI</h1>
+        <p>Teste seus conhecimentos</p>
+    </header>
+
+    <div class="intro-section">
+        <div class="intro-container">
+        </div>
+    </div>
+
+    <main class="container-quiz">
+        <div id="quiz-container">
+            </div>
+
+        <div class="quiz-actions">
+            <button id="submit-quiz" class="nav-link submit-btn">Finalizar e Ver Nota</button>
+            <button id="retry-bottom" class="nav-link retry-btn hidden" onclick="location.reload()">Tentar Novamente</button>
+        </div>
+    </main>
+
+    <div id="modal-result" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 id="modal-title">Resultado</h2>
+            <p id="modal-score" style="font-size: 1.4rem; margin: 15px 0; font-weight: bold;"></p>
+            <p id="modal-message"></p>
+            <p class="modal-instruction">Feche no "X" para revisar suas respostas abaixo.</p>
+        </div>
+    </div>
+
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>
