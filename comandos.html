@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos de Rede - Guia OSI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/comandos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Comandos de Rede</h1>
+        <p>Diagnóstico e monitoramento em Windows e Linux</p>
+    </header>
+
+    <div class="intro-section">
+        <div class="intro-container">
+            <p style="margin-top: 20px;">Ferramentas de linha de comando são essenciais para testar as camadas do Modelo OSI, especialmente as camadas de <strong>Rede</strong> e <strong>Transporte</strong>.</p>
+        </div>
+    </div>
+
+    <main class="container-comandos">
+
+        <section class="command-section">
+            <h2>1. PING (Conectividade básica)</h2>
+            <p>Verifica se um host está acessível usando mensagens ICMP (Camada 3).</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd1">ping google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd1')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd2">ping -c 4 google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd2')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>2. TRACERT / TRACEROUTE (Salto por salto)</h2>
+            <p>Rastreia o caminho percorrido pelos pacotes até o destino.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd-tr-win">tracert google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-tr-win')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-tr-lin">traceroute google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-tr-lin')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>3. Configurações de Interface</h2>
+            <p>Exibe detalhes dos adaptadores de rede e endereços IP.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd3">ipconfig /all</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd3')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd4">ip addr show</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd4')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>4. NSLOOKUP (Consulta DNS)</h2>
+            <p>Verifica a resolução de nomes de domínio (Camada 7).</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows / Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-ns">nslookup google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-ns')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>5. NETSTAT (Conexões Ativas)</h2>
+            <p>Lista todas as portas abertas e conexões TCP/UDP (Camada 4).</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd-net-win">netstat -an</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-net-win')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-net-lin">ss -tunlp</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-net-lin')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>6. ARP (Tabela de Endereços MAC)</h2>
+            <p>Exibe a correspondência entre IP e Endereço Físico (Camada 2).</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows / Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-arp">arp -a</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-arp')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>7. Identificar Endereço MAC</h2>
+            <p>Obtém o endereço físico único da placa de rede.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd-mac-win">getmac</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-mac-win')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-mac-lin">ip link show</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-mac-lin')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>8. Tabela de Roteamento</h2>
+            <p>Exibe as rotas que o sistema usa para enviar pacotes.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd-route-win">route print</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-route-win')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-route-lin">ip route</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-route-lin')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>9. Testar Porta Específica</h2>
+            <p>Verifica se uma porta (ex: 80 para HTTP) está aberta em um servidor.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows</div>
+                <div class="code-container">
+                    <pre><code id="cmd-telnet">telnet google.com 80</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-telnet')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-nc">nc -zv google.com 80</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-nc')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-section">
+            <h2>10. Informações de Domínio</h2>
+            <p>Obtém detalhes do registro de um domínio ou registros DNS detalhados.</p>
+            <div class="terminal-block">
+                <div class="terminal-header">Windows (via PowerShell)</div>
+                <div class="code-container">
+                    <pre><code id="cmd-dig-win">Resolve-DnsName google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-dig-win')">Copiar</button>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <div class="terminal-header linux">Linux</div>
+                <div class="code-container">
+                    <pre><code id="cmd-dig-lin">dig google.com</code></pre>
+                    <button class="copy-btn" onclick="copyCode('cmd-dig-lin')">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/comandos.js"></script>
+</body>
+</html>

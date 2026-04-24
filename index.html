@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Modelo OSI - Interativo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Entendendo o Modelo OSI</h1>
+        <p>Explore as 7 camadas da comunicação de rede</p>
+    </header>
+
+    <main class="container">
+        
+
+        <section class="intro-section">
+        <div class="intro-container">
+            <h2>Introdução ao Modelo</h2>
+            <p>O <strong>Modelo OSI</strong> foi proposto pela ISO como uma tentativa de padronizar os protocolos usados nas diversas camadas de comunicação. Ele organiza a comunicação em <strong>sete camadas</strong>, com o objetivo de dividir o processo de transmissão de dados em partes gerenciáveis e bem definidas.</p>
+            
+            <h3>Características das Camadas:</h3>
+            <ul>
+                <li><strong>Abstração:</strong> Uma nova camada é criada quando há necessidade de mais abstração.</li>
+                <li><strong>Função Específica:</strong> Cada camada realiza uma função definida.</li>
+                <li><strong>Padronização:</strong> As funções visam garantir a compatibilidade dos protocolos.</li>
+                <li><strong>Fronteiras Eficientes:</strong> Definidas para minimizar o tráfego desnecessário de informações.</li>
+                <li><strong>Arquitetura Controlável:</strong> O número de camadas evita sobrecargas de funções.</li>
+            </ul>
+            <a href="exemplos.html" class="nav-link">Ver Exemplos Práticos →</a>
+        </div>
+    </section>
+    
+    <section class="osi-stack" id="osi-stack">
+            </section>
+
+        <section class="details-panel" id="details-panel">
+            <div id="placeholder-text"></div>
+            <div id="content-display" class="hidden">
+                <h2 id="layer-title"></h2>
+                <p id="layer-description"></p>
+                <div class="info-box">
+                    <strong>PDU:</strong> <span id="layer-pdu"></span>
+                </div>
+                <div class="info-box">
+                    <strong>Exemplos:</strong> <span id="layer-examples"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

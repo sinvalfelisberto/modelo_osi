@@ -1,0 +1,75 @@
+/* Estilos específicos para os terminais */
+.container-comandos {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.command-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.command-section h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.terminal-block {
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #444;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.terminal-header.linux {
+    background: #27ae60; /* Verde para diferenciar Linux */
+}
+
+.code-container {
+    background: #0c0c0c; /* Fundo preto terminal */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+code {
+    color: #00ff00; /* Verde Matrix */
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 1rem;
+}
+
+.copy-btn {
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.copy-btn:hover {
+    background: #555;
+    color: white;
+}
+
+/* Feedback de cópia */
+.copy-btn.copied {
+    background: #27ae60;
+    border-color: #27ae60;
+}

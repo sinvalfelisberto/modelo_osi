@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos do Modelo OSI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exemplo-card {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .exemplo-card h3 { color: var(--accent); margin-top: 0; }
+        .back-button {
+            display: inline-block;
+            margin: 40px 0;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplos das Camadas</h1>
+        <p>Aplicações reais de cada nível</p>
+    </header>
+
+    <main class="container" style="flex-direction: column;">
+        <div class="exemplo-card">
+            <h3>Camadas Superiores (7, 6 e 5)</h3>
+            <p><strong>Exemplo:</strong> Quando você envia um e-mail. A camada de Aplicação (HTTP/SMTP) fornece a interface, a de Apresentação formata os dados e a de Sessão mantém a conexão aberta com o servidor de e-mail.</p>
+        </div>
+
+        <div class="exemplo-card">
+            <h3>Camada de Transporte (4)</h3>
+            <p><strong>Exemplo:</strong> Streaming de vídeo. O protocolo UDP é usado para velocidade, permitindo pequenas perdas de pacotes sem travar a transmissão.</p>
+        </div>
+
+        <div class="exemplo-card">
+            <h3>Camada de Rede (3)</h3>
+            <p><strong>Exemplo:</strong> O roteador da sua casa decidindo o caminho que um pacote de dados deve seguir para chegar aos servidores do Google.</p>
+        </div>
+
+        <div class="exemplo-card">
+            <h3>Camadas Inferiores (2 e 1)</h3>
+            <p><strong>Exemplo:</strong> O sinal Wi-Fi (Física) e o endereço MAC da sua placa de rede (Enlace) que permite que o roteador identifique seu celular.</p>
+        </div>
+
+        <a href="index.html" class="back-button">← Voltar para o Início</a>
+    </main>
+</body>
+</html>
