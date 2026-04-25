@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IP - Guia OSI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/calculadora.css">
+</head>
+<body>
+
+    <header>
+        <h1>Calculadora de Sub-rede IP</h1>
+        <p>Planejamento e análise da Camada de Rede (Camada 3)</p>
+    </header>
+
+    <div class="intro-section">
+        <div class="intro-container">
+            <a href="index.html" class="back-button">← Voltar ao Início</a>
+        </div>
+    </div>
+
+    <main class="container-calc">
+        <div class="calc-card">
+            <div class="input-group">
+                <label for="ip-input">Endereço IP:</label>
+                <input type="text" id="ip-input" placeholder="Ex: 192.168.1.10">
+            </div>
+            <div class="input-group">
+                <label for="cidr-input">Máscara (CIDR):</label>
+                <input type="number" id="cidr-input" placeholder="Ex: 24" min="0" max="32">
+            </div>
+            <button id="calc-btn" class="nav-link submit-btn">Calcular Sub-rede</button>
+        </div>
+
+        <div id="result-panel" class="result-card hidden">
+            <h3>Resultados da Análise</h3>
+            <div class="result-grid">
+                <div class="result-item"><strong>Endereço de Rede:</strong> <span id="res-network"></span></div>
+                <div class="result-item"><strong>Máscara de Rede:</strong> <span id="res-mask"></span></div>
+                <div class="result-item"><strong>Endereço de Broadcast:</strong> <span id="res-broadcast"></span></div>
+                <div class="result-item"><strong>Primeiro Host:</strong> <span id="res-first"></span></div>
+                <div class="result-item"><strong>Último Host:</strong> <span id="res-last"></span></div>
+                <div class="result-item"><strong>Total de Hosts Úteis:</strong> <span id="res-hosts"></span></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/calculadora.js"></script>
+</body>
+</html>
